@@ -4,148 +4,303 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maburisi Online Services</title>
+
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
 body {
-  font-family:Arial,sans-serif;
-  color:#263247;
-  line-height:1.6;
-  background:#f5f8fc;
+  font-family: Arial, sans-serif;
+  background: #f5f8fc;
+  color: #263247;
+  line-height: 1.6;
 }
+
 header {
-  background:#071d3b;
-  color:white;
-  padding:18px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:15px;
+  background: #071d3b;
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
-.logo { font-size:23px; font-weight:bold; color:#ffc857; }
+
+.logo {
+  color: #ffc857;
+  font-size: 21px;
+  font-weight: bold;
+}
+
 nav a {
-  color:white;
-  text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
 }
-nav a:hover { color:#ffc857; }
+
+nav a:hover { color: #ffc857; }
+
 .hero {
-  background:linear-gradient(120deg,#071d3b,#1263a5);
-  color:white;
-  padding:90px 7%;
-  text-align:center;
+  background: linear-gradient(120deg,#071d3b,#1263a5);
+  color: white;
+  text-align: center;
+  padding: 90px 7%;
 }
-.hero h1 { font-size:42px; margin-bottom:15px; }
-.hero p { max-width:650px; margin:0 auto 25px; }
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto auto 25px;
+}
+
 .btn {
-  display:inline-block;
-  background:#ffc857;
-  color:#071d3b;
-  padding:13px 25px;
-  border-radius:7px;
-  text-decoration:none;
-  font-weight:bold;
+  display: inline-block;
+  background: #ffc857;
+  color: #071d3b;
+  padding: 13px 25px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
-section { padding:65px 7%; }
+
+section { padding: 65px 7%; }
+
 .section-title {
-  text-align:center;
-  color:#071d3b;
-  font-size:30px;
-  margin-bottom:12px;
+  text-align: center;
+  color: #071d3b;
+  font-size: 30px;
+  margin-bottom: 12px;
 }
+
 .subtitle {
-  text-align:center;
-  margin-bottom:35px;
-  color:#64748b;
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 35px;
 }
+
 .about {
-  max-width:850px;
-  margin:auto;
-  text-align:center;
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
 }
+
+.profile {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #ffc857;
+  object-fit: cover;
+  margin-bottom: 15px;
+  background: #dce6f2;
+}
+
 .services {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
 }
+
 .service {
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 4px 15px rgba(0,0,0,.07);
-  text-align:center;
-  border-bottom:4px solid #ffc857;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.07);
+  text-align: center;
+  border-bottom: 4px solid #ffc857;
 }
-.service .emoji { font-size:38px; }
-.service h3 { color:#071d3b; margin:12px 0; }
+
+.service .emoji { font-size: 38px; }
+
+.service h3 {
+  color: #071d3b;
+  margin: 12px 0;
+}
+
+.order-section {
+  background: #eaf2fa;
+}
+
+.order-form {
+  background: white;
+  max-width: 650px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.order-form label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 6px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccd5e0;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+.order-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.order-form button {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
 .contact {
-  background:#eaf2fa;
-  text-align:center;
+  text-align: center;
+  background: white;
 }
-.contact p { margin:12px 0; }
+
+.contact p { margin: 12px 0; }
+
+.social-links {
+  margin-top: 22px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 7px;
+  padding: 10px 17px;
+  background: #071d3b;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 footer {
-  background:#071d3b;
-  color:white;
-  text-align:center;
-  padding:25px;
+  background: #071d3b;
+  color: white;
+  text-align: center;
+  padding: 25px;
 }
+
 .whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#20bd5a;
-  color:white;
-  padding:14px 20px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 3px 12px #888;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #20bd5a;
+  color: white;
+  padding: 14px 19px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 12px #888;
+  z-index: 10;
 }
+
 @media(max-width:600px) {
-  header { justify-content:center; text-align:center; }
-  nav { text-align:center; }
-  nav a { display:inline-block; margin:5px; }
-  .hero h1 { font-size:30px; }
-  section { padding:45px 5%; }
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav { text-align: center; }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .hero h1 { font-size: 29px; }
+
+  section { padding: 45px 5%; }
+
+  .order-form { padding: 20px; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">MABURISI ONLINE SERVICES</div>
+
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#order">Order</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
+<!-- HOME -->
+
 <div class="hero" id="home">
   <h1>Welcome to Maburisi Online Services</h1>
-  <p>Your trusted partner for online applications, student registration, government services and digital solutions.</p>
-  <a href="#services" class="btn">Explore Our Services</a>
+
+  <p>
+    Your trusted partner for online applications,
+    student registration, government services,
+    document preparation and digital solutions.
+  </p>
+
+  <a href="#order" class="btn">Place Your Order</a>
 </div>
+
+<!-- ABOUT -->
 
 <section id="about">
   <h2 class="section-title">About Us</h2>
   <p class="subtitle">Who We Are</p>
+
   <div class="about">
+
+    <!-- Add your personal photo here later -->
+
+    <img
+      src="https://placehold.co/300x300?text=Your+Photo"
+      alt="Maburisi profile"
+      class="profile"
+    >
+
+    <h3>Maburisi Online Services</h3>
+
     <p>
-      Maburisi Online Services is a digital service provider
-      dedicated to helping individuals, students and businesses
-      access online services easily, quickly and efficiently.
-      Our mission is to make digital services accessible to everyone.
+      Maburisi Online Services is a digital service
+      provider dedicated to helping individuals,
+      students and businesses access online services
+      easily, quickly and efficiently.
+
+      Our mission is to make digital services
+      accessible to everyone through reliable
+      and professional assistance.
     </p>
+
   </div>
 </section>
 
+<!-- SERVICES -->
+
 <section id="services">
   <h2 class="section-title">Our Services</h2>
-  <p class="subtitle">We are here to help you with your digital needs.</p>
+
+  <p class="subtitle">
+    We are here to help you with your digital needs.
+  </p>
 
   <div class="services">
 
@@ -164,7 +319,7 @@ footer {
     <div class="service">
       <div class="emoji">🏛️</div>
       <h3>IREMBO Services</h3>
-      <p>Assistance accessing different government services through Irembo.</p>
+      <p>Assistance accessing government services through Irembo.</p>
     </div>
 
     <div class="service">
@@ -188,20 +343,160 @@ footer {
   </div>
 </section>
 
+<!-- ORDER FORM -->
+
+<section class="order-section" id="order">
+
+  <h2 class="section-title">Place Your Order</h2>
+
+  <p class="subtitle">
+    Fill in the form below to request our services.
+  </p>
+
+  <form class="order-form" id="orderForm">
+
+    <label for="name">Full Name *</label>
+    <input
+      type="text"
+      id="name"
+      placeholder="Enter your full name"
+      required
+    >
+
+    <label for="phone">Your Phone Number *</label>
+    <input
+      type="tel"
+      id="phone"
+      placeholder="Enter your phone number"
+      required
+    >
+
+    <label for="email">Your Email</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your email"
+    >
+
+    <label for="service">Select Service *</label>
+    <select id="service" required>
+      <option value="">Choose a service</option>
+      <option>University Applications</option>
+      <option>Student Registration</option>
+      <option>IREMBO Services</option>
+      <option>RRA Services</option>
+      <option>CV Writing</option>
+      <option>Printing Services</option>
+      <option>Other Services</option>
+    </select>
+
+    <label for="details">Describe Your Request *</label>
+    <textarea
+      id="details"
+      placeholder="Explain what you need..."
+      required
+    ></textarea>
+
+    <button type="submit" class="btn">
+      Submit Order on WhatsApp
+    </button>
+
+  </form>
+</section>
+
+<!-- CONTACT -->
+
 <section class="contact" id="contact">
+
   <h2 class="section-title">Contact Us</h2>
-  <p>Do you need help? We are ready to assist you.</p>
-  <p><strong>Business:</strong> Maburisi Online Services</p>
-  <p>Contact us through WhatsApp for more information.</p>
-  <a class="btn" href="https://wa.me/250795546042">Chat on WhatsApp</a>
+
+  <p>We are ready to assist you.</p>
+
+  <p>
+    <strong>Business:</strong>
+    Maburisi Online Services
+  </p>
+
+  <p>
+    <strong>WhatsApp:</strong>
+    +250 795 546 042
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    Add your email address here
+  </p>
+
+  <div class="social-links">
+
+    <a href="https://wa.me/250795546042" target="_blank">
+      WhatsApp
+    </a>
+
+    <a href="#" target="_blank">
+      TikTok
+    </a>
+
+    <a href="#" target="_blank">
+      Facebook
+    </a>
+
+    <a href="#" target="_blank">
+      Instagram
+    </a>
+
+  </div>
+
 </section>
 
 <footer>
-  <p>© 2026 Maburisi Online Services. All Rights Reserved.</p>
+  <p>
+    © 2026 Maburisi Online Services.
+    All Rights Reserved.
+  </p>
+
   <p>Your trusted partner in digital services.</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/250795546042">WhatsApp</a>
+<a
+  class="whatsapp"
+  href="https://wa.me/250795546042"
+  target="_blank"
+>
+  WhatsApp
+</a>
 
-</body> 
+<!-- WHATSAPP ORDER FUNCTION -->
+
+<script>
+
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const service = document.getElementById("service").value;
+  const details = document.getElementById("details").value.trim();
+
+  const message =
+    "NEW CUSTOMER ORDER - MABURISI ONLINE SERVICES\n\n" +
+    "Full Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Email: " + (email || "Not provided") + "\n" +
+    "Service: " + service + "\n" +
+    "Request Details: " + details;
+
+  const whatsappURL =
+    "https://wa.me/250795546042?text=" +
+    encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
 </html>
