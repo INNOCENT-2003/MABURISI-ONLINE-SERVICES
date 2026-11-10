@@ -3,232 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maburisi Online Services</title>
+<title>MABURISI ONLINE SERVICES</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#f5f7fb;
+ color:#17243b;
 }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f8fc;
-  color: #263247;
-  line-height: 1.6;
+header{
+ background:#071b3a;
+ color:white;
+ padding:22px 7%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ flex-wrap:wrap;
 }
-
-header {
-  background: #071d3b;
-  color: white;
-  padding: 18px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+header h2{color:#f5bd45;margin:0}
+nav a{
+ color:white;text-decoration:none;
+ margin:8px;font-weight:bold;
 }
-
-.logo {
-  color: #ffc857;
-  font-size: 21px;
-  font-weight: bold;
+.hero{
+ background:linear-gradient(120deg,#071b3a,#174c82);
+ color:white;text-align:center;padding:75px 20px;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 8px;
-  font-size: 14px;
+.hero h1{font-size:36px;color:#f5bd45}
+.hero p{font-size:18px}
+.btn{
+ display:inline-block;background:#f5bd45;
+ color:#071b3a;padding:13px 22px;
+ border-radius:7px;text-decoration:none;
+ font-weight:bold;border:0;cursor:pointer;
 }
-
-nav a:hover { color: #ffc857; }
-
-.hero {
-  background: linear-gradient(120deg,#071d3b,#1263a5);
-  color: white;
-  text-align: center;
-  padding: 90px 7%;
+section{padding:45px 7%}
+h2.title{text-align:center;color:#09244a}
+.services{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:22px;
 }
-
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
+.card{
+ background:white;border-radius:12px;
+ overflow:hidden;box-shadow:0 3px 15px #0001;
+ text-align:center;padding-bottom:20px;
 }
-
-.hero p {
-  max-width: 650px;
-  margin: auto auto 25px;
+.card img{
+ width:100%;height:160px;object-fit:cover;
+ background:#dce5f0;
 }
-
-.btn {
-  display: inline-block;
-  background: #ffc857;
-  color: #071d3b;
-  padding: 13px 25px;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
+.price{color:#087a48;font-size:20px;font-weight:bold}
+.card button{margin-top:10px}
+.order{
+ background:white;max-width:600px;
+ margin:auto;padding:25px;border-radius:12px;
+ box-shadow:0 3px 15px #0001;
 }
-
-section { padding: 65px 7%; }
-
-.section-title {
-  text-align: center;
-  color: #071d3b;
-  font-size: 30px;
-  margin-bottom: 12px;
+input,select,textarea{
+ width:100%;padding:13px;margin:9px 0;
+ border:1px solid #ccd3dd;border-radius:6px;
+ font-size:15px;
 }
-
-.subtitle {
-  text-align: center;
-  color: #64748b;
-  margin-bottom: 35px;
+.order button{width:100%;margin-top:12px}
+.contact{
+ background:#071b3a;color:white;text-align:center;
 }
-
-.about {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
+footer{
+ background:#041127;color:white;
+ text-align:center;padding:20px;
 }
-
-.profile {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 5px solid #ffc857;
-  object-fit: cover;
-  margin-bottom: 15px;
-  background: #dce6f2;
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 22px;
-}
-
-.service {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.07);
-  text-align: center;
-  border-bottom: 4px solid #ffc857;
-}
-
-.service .emoji { font-size: 38px; }
-
-.service h3 {
-  color: #071d3b;
-  margin: 12px 0;
-}
-
-.order-section {
-  background: #eaf2fa;
-}
-
-.order-form {
-  background: white;
-  max-width: 650px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0,0,0,.08);
-}
-
-.order-form label {
-  display: block;
-  font-weight: bold;
-  margin: 15px 0 6px;
-}
-
-.order-form input,
-.order-form select,
-.order-form textarea {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #ccd5e0;
-  border-radius: 7px;
-  font-size: 15px;
-}
-
-.order-form textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-.order-form button {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 16px;
-}
-
-.contact {
-  text-align: center;
-  background: white;
-}
-
-.contact p { margin: 12px 0; }
-
-.social-links {
-  margin-top: 22px;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 7px;
-  padding: 10px 17px;
-  background: #071d3b;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-footer {
-  background: #071d3b;
-  color: white;
-  text-align: center;
-  padding: 25px;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #20bd5a;
-  color: white;
-  padding: 14px 19px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 3px 12px #888;
-  z-index: 10;
-}
-
-@media(max-width:600px) {
-  header {
-    justify-content: center;
-    text-align: center;
-  }
-
-  nav { text-align: center; }
-
-  nav a {
-    display: inline-block;
-    margin: 5px;
-  }
-
-  .hero h1 { font-size: 29px; }
-
-  section { padding: 45px 5%; }
-
-  .order-form { padding: 20px; }
+@media(max-width:600px){
+ header{justify-content:center;gap:15px}
+ .hero h1{font-size:28px}
 }
 </style>
 </head>
@@ -236,266 +85,144 @@ footer {
 <body>
 
 <header>
-  <div class="logo">MABURISI ONLINE SERVICES</div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#order">Order</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h2>MABURISI ONLINE SERVICES</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#order">Order</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<!-- HOME -->
-
 <div class="hero" id="home">
-  <h1>Welcome to Maburisi Online Services</h1>
-
-  <p>
-    Your trusted partner for online applications,
-    student registration, government services,
-    document preparation and digital solutions.
-  </p>
-
-  <a href="#order" class="btn">Place Your Order</a>
+<h1>WELCOME TO MABURISI ONLINE SERVICES</h1>
+<p>Your Trusted Partner for Online Services</p>
+<p>Fast, Reliable and Affordable Services.</p>
+<a href="#services" class="btn">Explore Our Services</a>
 </div>
 
-<!-- ABOUT -->
-
-<section id="about">
-  <h2 class="section-title">About Us</h2>
-  <p class="subtitle">Who We Are</p>
-
-  <div class="about">
-
-    <!-- Add your personal photo here later -->
-
-    <img
-      src="https://placehold.co/300x300?text=Your+Photo"
-      alt="Maburisi profile"
-      class="profile"
-    >
-
-    <h3>Maburisi Online Services</h3>
-
-    <p>
-      Maburisi Online Services is a digital service
-      provider dedicated to helping individuals,
-      students and businesses access online services
-      easily, quickly and efficiently.
-
-      Our mission is to make digital services
-      accessible to everyone through reliable
-      and professional assistance.
-    </p>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-
 <section id="services">
-  <h2 class="section-title">Our Services</h2>
+<h2 class="title">OUR SERVICES & PRICES</h2>
 
-  <p class="subtitle">
-    We are here to help you with your digital needs.
-  </p>
+<div class="services">
 
-  <div class="services">
+<div class="card">
+<img src="images/university.jpg" alt="University Application">
+<h3>University Application</h3>
+<p>Professional university application assistance.</p>
+<p class="price">3,000 RWF</p>
+<button class="btn" onclick="choose('University Application')">Order Now</button>
+</div>
 
-    <div class="service">
-      <div class="emoji">🎓</div>
-      <h3>University Applications</h3>
-      <p>Assistance with university applications and admission processes.</p>
-    </div>
+<div class="card">
+<img src="images/registration.jpg" alt="Student Registration">
+<h3>Student Registration</h3>
+<p>Get help with student registration.</p>
+<p class="price">2,000 RWF</p>
+<button class="btn" onclick="choose('Student Registration')">Order Now</button>
+</div>
 
-    <div class="service">
-      <div class="emoji">📝</div>
-      <h3>Student Registration</h3>
-      <p>Help with online student registration and academic applications.</p>
-    </div>
+<div class="card">
+<img src="images/irembo.jpg" alt="Irembo Services">
+<h3>Irembo Services</h3>
+<p>Assistance with Irembo online services.</p>
+<p class="price">500 RWF</p>
+<button class="btn" onclick="choose('Irembo Services')">Order Now</button>
+</div>
 
-    <div class="service">
-      <div class="emoji">🏛️</div>
-      <h3>IREMBO Services</h3>
-      <p>Assistance accessing government services through Irembo.</p>
-    </div>
+<div class="card">
+<img src="images/rra.jpg" alt="RRA Services">
+<h3>RRA Services</h3>
+<p>Professional assistance with RRA services.</p>
+<p class="price">10,000 RWF</p>
+<button class="btn" onclick="choose('RRA Services')">Order Now</button>
+</div>
 
-    <div class="service">
-      <div class="emoji">💼</div>
-      <h3>RRA Services</h3>
-      <p>Assistance with online tax services and RRA applications.</p>
-    </div>
+<div class="card">
+<img src="images/cv.jpg" alt="CV Writing">
+<h3>CV Writing</h3>
+<p>Professional CV writing and preparation.</p>
+<p class="price">1,500 RWF</p>
+<button class="btn" onclick="choose('CV Writing')">Order Now</button>
+</div>
 
-    <div class="service">
-      <div class="emoji">📄</div>
-      <h3>CV Writing</h3>
-      <p>Professional CV preparation and document formatting.</p>
-    </div>
-
-    <div class="service">
-      <div class="emoji">🖨️</div>
-      <h3>Printing Services</h3>
-      <p>Document printing, typing, scanning and photocopying.</p>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<!-- ORDER FORM -->
+<section id="order">
+<h2 class="title">PLACE YOUR ORDER</h2>
 
-<section class="order-section" id="order">
+<div class="order">
+<form onsubmit="sendOrder(event)">
 
-  <h2 class="section-title">Place Your Order</h2>
+<label>Your Full Name</label>
+<input id="name" type="text" placeholder="Enter your name" required>
 
-  <p class="subtitle">
-    Fill in the form below to request our services.
-  </p>
+<label>Your Phone Number</label>
+<input id="phone" type="tel" placeholder="Enter phone number" required>
 
-  <form class="order-form" id="orderForm">
+<label>Select Service</label>
+<select id="service" required>
+<option value="">Choose a service</option>
+<option>University Application - 3,000 RWF</option>
+<option>Student Registration - 2,000 RWF</option>
+<option>Irembo Services - 500 RWF</option>
+<option>RRA Services - 10,000 RWF</option>
+<option>CV Writing - 1,500 RWF</option>
+</select>
 
-    <label for="name">Full Name *</label>
-    <input
-      type="text"
-      id="name"
-      placeholder="Enter your full name"
-      required
-    >
+<label>Additional Information</label>
+<textarea id="details" rows="4" placeholder="Describe what you need"></textarea>
 
-    <label for="phone">Your Phone Number *</label>
-    <input
-      type="tel"
-      id="phone"
-      placeholder="Enter your phone number"
-      required
-    >
+<button class="btn" type="submit">SEND ORDER VIA WHATSAPP</button>
+</form>
 
-    <label for="email">Your Email</label>
-    <input
-      type="email"
-      id="email"
-      placeholder="Enter your email"
-    >
+<p style="text-align:center">
+Your order will be sent directly to our WhatsApp.
+</p>
 
-    <label for="service">Select Service *</label>
-    <select id="service" required>
-      <option value="">Choose a service</option>
-      <option>University Applications</option>
-      <option>Student Registration</option>
-      <option>IREMBO Services</option>
-      <option>RRA Services</option>
-      <option>CV Writing</option>
-      <option>Printing Services</option>
-      <option>Other Services</option>
-    </select>
-
-    <label for="details">Describe Your Request *</label>
-    <textarea
-      id="details"
-      placeholder="Explain what you need..."
-      required
-    ></textarea>
-
-    <button type="submit" class="btn">
-      Submit Order on WhatsApp
-    </button>
-
-  </form>
+</div>
 </section>
 
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-  <h2 class="section-title">Contact Us</h2>
-
-  <p>We are ready to assist you.</p>
-
-  <p>
-    <strong>Business:</strong>
-    Maburisi Online Services
-  </p>
-
-  <p>
-    <strong>WhatsApp:</strong>
-    +250 795 546 042
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    Add your email address here
-  </p>
-
-  <div class="social-links">
-
-    <a href="https://wa.me/250795546042" target="_blank">
-      WhatsApp
-    </a>
-
-    <a href="#" target="_blank">
-      TikTok
-    </a>
-
-    <a href="#" target="_blank">
-      Facebook
-    </a>
-
-    <a href="#" target="_blank">
-      Instagram
-    </a>
-
-  </div>
-
+<section id="contact" class="contact">
+<h2>CONTACT US</h2>
+<p>WhatsApp: +250795546042</p>
+<p>Email: maburisionlineservices@gmail.com</p>
+<a class="btn" href="mailto:maburisionlineservices@gmail.com">Send Us an Email</a>
 </section>
 
 <footer>
-  <p>
-    © 2026 Maburisi Online Services.
-    All Rights Reserved.
-  </p>
-
-  <p>Your trusted partner in digital services.</p>
+<p>© 2026 MABURISI ONLINE SERVICES. All Rights Reserved.</p>
 </footer>
 
-<a
-  class="whatsapp"
-  href="https://wa.me/250795546042"
-  target="_blank"
->
-  WhatsApp
-</a>
-
-<!-- WHATSAPP ORDER FUNCTION -->
-
 <script>
+function choose(service){
+ document.getElementById("service").value =
+ service + (service === "University Application" ? " - 3,000 RWF" :
+ service === "Student Registration" ? " - 2,000 RWF" :
+ service === "Irembo Services" ? " - 500 RWF" :
+ service === "RRA Services" ? " - 10,000 RWF" :
+ " - 1,500 RWF");
+ document.getElementById("order").scrollIntoView({behavior:"smooth"});
+}
 
-document.getElementById("orderForm").addEventListener("submit", function(event) {
+function sendOrder(event){
+ event.preventDefault();
 
-  event.preventDefault();
+ const name=document.getElementById("name").value;
+ const phone=document.getElementById("phone").value;
+ const service=document.getElementById("service").value;
+ const details=document.getElementById("details").value;
 
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const service = document.getElementById("service").value;
-  const details = document.getElementById("details").value.trim();
+ const message =
+ "NEW ORDER - MABURISI ONLINE SERVICES%0A"+
+ "Name: "+encodeURIComponent(name)+"%0A"+
+ "Phone: "+encodeURIComponent(phone)+"%0A"+
+ "Service: "+encodeURIComponent(service)+"%0A"+
+ "Details: "+encodeURIComponent(details);
 
-  const message =
-    "NEW CUSTOMER ORDER - MABURISI ONLINE SERVICES\n\n" +
-    "Full Name: " + name + "\n" +
-    "Phone: " + phone + "\n" +
-    "Email: " + (email || "Not provided") + "\n" +
-    "Service: " + service + "\n" +
-    "Request Details: " + details;
-
-  const whatsappURL =
-    "https://wa.me/250795546042?text=" +
-    encodeURIComponent(message);
-
-  window.open(whatsappURL, "_blank");
-
-});
-
+ window.open("https://wa.me/250795546042?text="+message,"_blank");
+}
 </script>
 
 </body>
